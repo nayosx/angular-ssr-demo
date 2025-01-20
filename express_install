@@ -1,0 +1,14 @@
+{
+    "name": "express-ssr-data",
+    "version": "1.0.0",
+    "description": "App Express que devuelve datos encriptados y desencriptados con CORS habilitado",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2"
+    }
+  }
+  
