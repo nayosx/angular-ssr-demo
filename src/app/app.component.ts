@@ -1,30 +1,17 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { DataService } from './app.service';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit{
-
-  data = inject(DataService);
-  resultEncripted: any = [];
-  resultDecripted: any = [];
-
-  ngOnInit(): void {
-    this.data.getEncryptedData().subscribe((data) => {
-      console.log('Data encriptada:', data);
-      this.resultEncripted = data;
-    });
-
-    this.data.getDecryptedData().subscribe((data) => {
-      console.log('Data desencriptada:', data);
-      this.resultDecripted = data;
-    });
-  }
+export class AppComponent {
   title = 'awesomeapp';
 }
